@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.CustomizedFragment"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bottom_bar"
+            android:fontFamily="@font/font_family"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="내가 만든 코스"
+            android:textColor="#3B3B44"
+            android:textSize="@dimen/maintab_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="등록된 코스가 없습니다"
+            android:gravity="center"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/font_family"
+            android:textSize="@dimen/there_is_no_course"
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+
+        <ListView
+            android:id="@+id/customized_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:overScrollMode="never"
+            android:divider="@null"
+            android:layout_marginHorizontal="20dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+    </LinearLayout>
+
+    <com.ensharp.seoul.seoultheplace.UIElement.FloatingButton.FloatingActionButton
+        android:id="@+id/create_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        fab:fab_colorNormal="@color/white"
+        fab:fab_colorPressed="@color/white_pressed"
+        fab:fab_icon="@drawable/item_pencil"
+        fab:fab_title="코스 만들기" />
+
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        card_view:cardBackgroundColor="#00000000"
+        card_view:cardCornerRadius="20dp">
+
+    <LinearLayout
+            android:id="@+id/place_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="4"
+            android:background="@drawable/item_unchoicedtag">
+
+        <ImageView
+            android:id="@+id/ex_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.8"
+            android:scaleType="centerCrop"
+            android:background="@color/non_active_dot"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.7"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/place_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="서촌, 감성을 깨우다"
+                android:fontFamily="@font/font_family"
+                android:textColor="#000000"
+                android:textSize="@dimen/overall_name" />
+
+            <TextView
+                android:id="@+id/place_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginTop="5dp"
+                android:text="서울특별시 종로구 청운효자동"
+                android:fontFamily="@font/font_family"
+                android:textColor="@color/place_cardview_location"
+                android:textSize="@dimen/overall_location"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/item_transparent_circle">
+
+        <ImageView
+                android:id="@+id/like_button"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:src="@drawable/unchoiced_heart" />
+
+    </FrameLayout>
+</android.support.v7.widget.CardView>

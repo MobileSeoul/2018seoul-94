@@ -1,0 +1,74 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="tab_font_size">11sp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="card_padding">60dp</dimen>
+
+    <dimen name="place_title_size">23sp</dimen>
+    <dimen name="place_address_size">16sp</dimen>
+    <dimen name="place_phone_size">15sp</dimen>
+    <dimen name="place_description_size">15sp</dimen>
+    <dimen name="place_detail_size">15sp</dimen>
+    <dimen name="place_change_size">13sp</dimen>
+
+    <dimen name="card_title_size">18sp</dimen>
+    <dimen name="card_address_size">12sp</dimen>
+
+    <dimen name="navigator_margin_top">5dp</dimen>
+    <dimen name="common_navigator_height">45dp</dimen>
+
+    <dimen name="regular_plus_button">56dp</dimen>
+
+    <!--메인 탭들-->
+    <dimen name="maintab_title">20sp</dimen>
+
+    <!--for floating action button-->
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_icon_size">24dp</dimen>
+    <dimen name="fab_plus_icon_size">14dp</dimen>
+    <dimen name="fab_plus_icon_stroke">2dp</dimen>
+    <dimen name="fab_shadow_offset">3dp</dimen>
+    <dimen name="fab_shadow_radius">9dp</dimen>
+    <dimen name="fab_stroke_width">1dp</dimen>
+    <dimen name="fab_actions_spacing">16dp</dimen>
+    <dimen name="fab_labels_margin">3dp</dimen>
+    <dimen name="plus_button_text_size">18sp</dimen>
+
+    <!--코스 내 카드 설정-->
+    <dimen name="course_card_title_size">19sp</dimen>
+    <dimen name="course_card_description_size">14sp</dimen>
+    <dimen name="course_card_guide_size">13sp</dimen>
+    <dimen name="course_place_name_size">20sp</dimen>
+    <dimen name="course_place_location_size">16sp</dimen>
+
+    <!--메인 코스 카드 설정-->
+    <dimen name="course_margintop">-42.61dp</dimen>
+    <dimen name="course_name_size">19sp</dimen>
+    <dimen name="course_location_size">15sp</dimen>
+    <dimen name="course_like_size">13sp</dimen>
+
+    <!--메인 플레이스 카드 설정-->
+    <dimen name="place_margintop">-42.61dp</dimen>
+    <dimen name="place_name_size">19sp</dimen>
+    <dimen name="place_location_size">15sp</dimen>
+    <dimen name="place_like_size">13sp</dimen>
+    <dimen name="card_radius">30dp</dimen>
+    <dimen name="card_radius_margin">-18dp</dimen>
+
+    <!--내가 만든 코스-->
+    <dimen name="there_is_no_course">19sp</dimen>
+
+    <!--추천 코스/플레이스 통합-->
+    <dimen name="overall_name">17sp</dimen>
+    <dimen name="overall_location">14sp</dimen>
+
+    <!--더보기탭 -->
+    <dimen name="setting_icon_size">25dp</dimen>
+    <dimen name="setting_text_size">16sp</dimen>
+    <dimen name="setting_margin_left">30dp</dimen>
+
+</resources>

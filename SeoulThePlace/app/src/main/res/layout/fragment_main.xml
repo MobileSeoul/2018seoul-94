@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MainFragment"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="9dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/new_backpack" />
+
+                <LinearLayout
+                    android:id="@+id/search_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/transform_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@drawable/item_home_search"
+                        android:gravity="center|right" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <com.ensharp.seoul.seoultheplace.UIElement.HorizontalListView
+                android:id="@+id/tagListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp" />
+
+            <FrameLayout
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="true"
+                android:visibility="gone">
+
+                <com.ensharp.seoul.seoultheplace.UIElement.SearchBar.JJSearchView
+                    android:id="@+id/jjsv"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp" />
+
+                <EditText
+                    android:id="@+id/search_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:hint="이름, 지역, 태그별로 검색 가능"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="55dp"
+                    android:layout_weight="4"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="#00BDFC"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/end"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|right"
+                    android:layout_marginRight="30dp"
+                    android:background="@null"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recent_search"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_weight="3.3"
+            android:background="@drawable/item_recent"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:fontFamily="@font/font_family"
+                android:text="최근 검색"
+                android:textSize="20sp" />
+
+            <ListView
+                android:id="@+id/recent_listview"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="3.2"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/no_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/font_family"
+                android:text="검색 결과가 없습니다."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/course_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:fontFamily="@font/bold_font_family"
+                android:padding="4dp"
+                android:layout_marginLeft="10dp"
+                android:paddingStart="14dp"
+                android:text="코스"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/course_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1.4"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="14dp"
+                android:paddingEnd="@dimen/card_padding"
+                android:paddingLeft="@dimen/card_padding"
+                android:paddingRight="@dimen/card_padding"
+                android:paddingStart="@dimen/card_padding" />
+
+            <TextView
+                android:id="@+id/place_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:fontFamily="@font/bold_font_family"
+                android:padding="4dp"
+                android:paddingStart="14dp"
+                android:layout_marginLeft="10dp"
+                android:text="플레이스"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/place_search_result"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1.4"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingBottom="12dp"
+                android:paddingEnd="@dimen/card_padding"
+                android:paddingLeft="@dimen/card_padding"
+                android:paddingRight="@dimen/card_padding"
+                android:paddingStart="@dimen/card_padding" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

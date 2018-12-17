@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/courseView"
+    app:cardUseCompatPadding="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    card_view:cardBackgroundColor="#00000000"
+    card_view:cardCornerRadius="@dimen/card_radius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/image_container"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="top"
+            card_view:cardBackgroundColor="@color/white"
+            card_view:cardCornerRadius="@dimen/card_radius">
+
+            <ImageView
+                android:id="@+id/course_image"
+                android:layout_width="match_parent"
+                android:layout_height="273dp"
+                android:background="@drawable/drawable_rounded_corner_background"
+                android:scaleType="centerCrop"/>
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top|right"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/item_transparent_circle">
+
+                <ImageView
+                    android:id="@+id/like_button"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:src="@drawable/unchoiced_heart" />
+
+            </FrameLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-43dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            card_view:cardBackgroundColor="#00000000">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardCornerRadius="@dimen/card_radius"
+                android:elevation="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/course_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:maxLength="16"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/course_name_size" />
+
+                    <TextView
+                        android:id="@+id/course_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/font_family"
+                        android:singleLine="true"
+                        android:textColor="@color/course_cardview_location"
+                        android:textSize="@dimen/course_location_size" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
